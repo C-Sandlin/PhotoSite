@@ -19,14 +19,14 @@ function TopNav() {
                 <div className="navlinks-desktop">
                     <a href="#" className="navlink">All Photos</a>
                     <div className="dropdown">
-                        <button className="dropbtn">
+                        <button className="dropbtn" onClick={showDropdownContent}>
                             Dropdown
                         </button>
-                        {/* <div className="dropdown-content">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
-                    </div> */}
+                        <div className="dropdown-content" id="dropdownContent">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                        </div>
                     </div>
                     <a href="#" className="navlink">Purchase</a>
                     <a href="#" className="navlink">About Me</a>
@@ -39,14 +39,14 @@ function TopNav() {
                     </p>
                     <a href="#" className="navlink">All Photos</a>
                     <div className="dropdown">
-                        <button className="dropbtn">
+                        <button className="dropbtn" onClick={showDropdownContent}>
                             Dropdown
                         </button>
-                        {/* <div className="dropdown-content">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
-                    </div> */}
+                        <div className="dropdown-content" id="dropdownContent">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                        </div>
                     </div>
                     <a href="#" className="navlink">Purchase</a>
                     <a href="#" className="navlink">About Me</a>
@@ -64,5 +64,14 @@ function showMobileMenu() {
         linkgroup.className += " active";
     } else {
         linkgroup.className = "nav-menu-mobile";
+    }
+}
+
+function showDropdownContent() {
+    let dropContent = document.getElementById("dropdownContent");
+    if (dropContent.className === "dropdown-content") {
+        dropContent.className += " showContent";
+    } else {
+        dropContent.className = "dropdown-content";
     }
 }
