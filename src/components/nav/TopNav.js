@@ -19,10 +19,10 @@ function TopNav() {
                 <div className="navlinks-desktop">
                     <a href="#" className="navlink">All Photos</a>
                     <div className="dropdown">
-                        <button className="dropbtn" onClick={showDropdownContent}>
+                        <a className="dropbtn" onClick={showDropdownContentDesktop} href="#">
                             Dropdown
-                        </button>
-                        <div className="dropdown-content" id="dropdownContent">
+                        </a>
+                        <div className="dropdown-content-desktop" id="dropdownContentDesktop">
                             <a href="#">Link 1</a>
                             <a href="#">Link 2</a>
                             <a href="#">Link 3</a>
@@ -39,10 +39,10 @@ function TopNav() {
                     </p>
                     <a href="#" className="navlink">All Photos</a>
                     <div className="dropdown">
-                        <button className="dropbtn" onClick={showDropdownContent}>
+                        <a className="dropbtn" onClick={showDropdownContentMobile} href="#">
                             Dropdown
-                        </button>
-                        <div className="dropdown-content" id="dropdownContent">
+                        </a>
+                        <div className="dropdown-content-mobile" id="dropdownContentMobile">
                             <a href="#">Link 1</a>
                             <a href="#">Link 2</a>
                             <a href="#">Link 3</a>
@@ -67,11 +67,20 @@ function showMobileMenu() {
     }
 }
 
-function showDropdownContent() {
-    let dropContent = document.getElementById("dropdownContent");
-    if (dropContent.className === "dropdown-content") {
+function showDropdownContentDesktop() {
+    let dropContent = document.getElementById("dropdownContentDesktop");
+    if (dropContent.className === "dropdown-content-desktop") {
         dropContent.className += " showContent";
     } else {
-        dropContent.className = "dropdown-content";
+        dropContent.className = "dropdown-content-desktop";
+    }
+}
+
+function showDropdownContentMobile() {
+    let dropContent = document.getElementById("dropdownContentMobile");
+    if (dropContent.className === "dropdown-content-mobile") {
+        dropContent.className += " showContent";
+    } else {
+        dropContent.className = "dropdown-content-mobile";
     }
 }
