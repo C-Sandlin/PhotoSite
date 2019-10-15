@@ -1,6 +1,6 @@
 import React from 'react';
 import mainLogo from "../../assets/cs-main-logo.svg";
-import { IoIosCloseCircleOutline } from "react-icons/io";
+import { IoIosCloseCircleOutline, IoIosArrowDown } from "react-icons/io";
 import { IconContext } from "react-icons";
 import "./TopNav.scss"
 
@@ -20,7 +20,7 @@ function TopNav() {
                     <a href="#" className="navlink">All Photos</a>
                     <div className="dropdown">
                         <a className="dropbtn" onClick={showDropdownContentDesktop} href="#">
-                            Dropdown
+                            Journeys <IoIosArrowDown />
                         </a>
                         <div className="dropdown-content-desktop" id="dropdownContentDesktop">
                             <a href="#">Link 1</a>
@@ -37,19 +37,19 @@ function TopNav() {
                             <IoIosCloseCircleOutline />
                         </IconContext.Provider>
                     </p>
-                    <a href="#" className="navlink">All Photos</a>
+                    <a href="#" className="navlink mobileNav">All Photos</a>
                     <div className="dropdown">
-                        <a className="dropbtn" onClick={showDropdownContentMobile} href="#">
-                            Dropdown
+                        <a className="dropbtn mobileNav" onClick={showDropdownContentMobile} href="#">
+                            Journeys
                         </a>
                         <div className="dropdown-content-mobile" id="dropdownContentMobile">
-                            <a href="#">Link 1</a>
-                            <a href="#">Link 2</a>
-                            <a href="#">Link 3</a>
+                            <a href="#" className="mobileNav">Link 1</a>
+                            <a href="#" className="mobileNav">Link 2</a>
+                            <a href="#" className="mobileNav">Link 3</a>
                         </div>
                     </div>
-                    <a href="#" className="navlink">Purchase</a>
-                    <a href="#" className="navlink">About Me</a>
+                    <a href="#" className="navlink mobileNav">Purchase</a>
+                    <a href="#" className="navlink mobileNav">About Me</a>
                 </div>
             </div>
 
