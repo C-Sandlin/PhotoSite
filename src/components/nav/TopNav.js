@@ -1,6 +1,6 @@
 import React from 'react';
 import mainLogo from "../../assets/cs-main-logo.svg";
-import { IoIosCloseCircleOutline, IoIosArrowDown } from "react-icons/io";
+import { IoIosCloseCircleOutline, IoIosArrowDown, IoMdMenu } from "react-icons/io";
 import { IconContext } from "react-icons";
 import "./TopNav.scss"
 
@@ -8,28 +8,31 @@ function TopNav() {
     return (
         <div className="topnav" id="myTopnav">
             <div className="topnav-logo-container">
-                <a>
-                    <img src={mainLogo} className="mainLogo"></img>
+                <a href="home">
+                    <img src={mainLogo} className="mainLogo" alt="Colin Sandlin Photography"></img>
                 </a>
             </div>
             <div className="topnav-links-container">
                 <div className="navlinks-mobile">
-                    <a className="hamburger" onClick={showMobileMenu}>&#9776;</a>
+                    <a className="hamburger" onClick={showMobileMenu} >
+                        <IconContext.Provider value={{ style: { fontSize: '40px' } }}>
+                            <IoMdMenu />
+                        </IconContext.Provider></a>
                 </div>
                 <div className="navlinks-desktop">
-                    <a href="#" className="navlink">All Photos</a>
+                    <a className="navlink" href="home">All Photos</a>
                     <div className="dropdown">
-                        <a className="dropbtn" onClick={showDropdownContentDesktop} href="#">
+                        <a className="dropbtn" onClick={showDropdownContentDesktop} >
                             Journeys <IoIosArrowDown />
                         </a>
                         <div className="dropdown-content-desktop" id="dropdownContentDesktop">
-                            <a href="#">Link 1</a>
-                            <a href="#">Link 2</a>
-                            <a href="#">Link 3</a>
+                            <a href="home">Link 1</a>
+                            <a href="home">Link 2</a>
+                            <a href="home">Link 3</a>
                         </div>
                     </div>
-                    <a href="#" className="navlink">Purchase</a>
-                    <a href="#" className="navlink">About Me</a>
+                    <a href="home" className="navlink">Purchase</a>
+                    <a href="home" className="navlink">About Me</a>
                 </div>
                 <div className="nav-menu-mobile" id="navMenu">
                     <p onClick={showMobileMenu} id="closeMenu">
@@ -37,19 +40,19 @@ function TopNav() {
                             <IoIosCloseCircleOutline />
                         </IconContext.Provider>
                     </p>
-                    <a href="#" className="navlink mobileNav">All Photos</a>
+                    <a href="home" className="navlink mobileNav">All Photos</a>
                     <div className="dropdown">
-                        <a className="dropbtn mobileNav" onClick={showDropdownContentMobile} href="#">
+                        <a className="dropbtn mobileNav" onClick={showDropdownContentMobile}>
                             Journeys
                         </a>
                         <div className="dropdown-content-mobile" id="dropdownContentMobile">
-                            <a href="#" className="mobileNav">Link 1</a>
-                            <a href="#" className="mobileNav">Link 2</a>
-                            <a href="#" className="mobileNav">Link 3</a>
+                            <a href="home" className="mobileNav">Link 1</a>
+                            <a href="home" className="mobileNav">Link 2</a>
+                            <a href="home" className="mobileNav">Link 3</a>
                         </div>
                     </div>
-                    <a href="#" className="navlink mobileNav">Purchase</a>
-                    <a href="#" className="navlink mobileNav">About Me</a>
+                    <a href="home" className="navlink mobileNav">Purchase</a>
+                    <a href="home" className="navlink mobileNav">About Me</a>
                 </div>
             </div>
 
