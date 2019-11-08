@@ -20,10 +20,10 @@ function TopNav() {
                         </IconContext.Provider></a>
                 </div>
                 <div className="navlinks-desktop">
-                    <a className="navlink" href="home">All Photos</a>
+                    <a className="navlink" href="home">All&nbsp;Photos</a>
                     <div className="dropdown">
                         <a className="dropbtn" onClick={showDropdownContentDesktop} >
-                            Journeys <IoIosArrowDown />
+                            Journeys&nbsp;<IoIosArrowDown />
                         </a>
                         <div className="dropdown-content-desktop" id="dropdownContentDesktop">
                             <a href="home">Link 1</a>
@@ -32,7 +32,7 @@ function TopNav() {
                         </div>
                     </div>
                     <a href="home" className="navlink">Purchase</a>
-                    <a href="home" className="navlink">About Me</a>
+                    <a href="home" className="navlink">About&nbsp;Me</a>
                 </div>
                 <div className="nav-menu-mobile" id="navMenu">
                     <p onClick={showMobileMenu} id="closeMenu">
