@@ -1,0 +1,28 @@
+.outer-landing {
+    width: 100vw;
+    height: calc(100vh - 50px);
+    @media (min-width: 769px) {
+        height: calc(100vh - 80px);
+    }
+}
+
+.inner-landing {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 10px 15px 15px 15px;
+    @media (min-width: 769px) {
+        padding: 20px 30px 30px 30px;
+    }
+}
+
+.landing-project {
+    width: 100%;
+    height: 100%;
+}
+
+#newZealand-proj {
+    background: url('https://firebasestorage.googleapis.com/v0/b/photosite-csandlin.appspot.com/o/NewZealand%2FHighRes%2FNZForWeb-1396.jpg?alt=media&token=d2d96472-e4c4-4f2f-8479-d92cd95e48d2') no-repeat center;
+    background-position: bottom;
+    background-size: cover;
+}

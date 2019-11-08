@@ -12,6 +12,8 @@
 
 .mainLogo {
     width: 150px;
+    margin-left: 15px;
+    margin-top: 15px;
 }
 
 .topnav-logo-container {
@@ -84,7 +86,7 @@ a.mobileNav {
     width:10%;
     height:100%;
     top: 0px;
-    left: 50%;
+    right: 0px;
     z-index:1000;
     transition: .3s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
@@ -97,19 +99,19 @@ a.mobileNav {
     height:100%;
     top:0px;
     left:0px;
-    transition: .1s cubic-bezier(0.39, 0.575, 0.565, 1);
+    transition: .3s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 p#closeMenu {
     position: absolute;
-    top: 3px;
-    right: 30px;
+    top: 0px;
+    right: 15px;
 }
 
 .hamburger {
     position: absolute;
     top: 12px;
-    right: 30px;
+    right: 15px;
 }
 .dropdown {
     margin-top: -2px;
