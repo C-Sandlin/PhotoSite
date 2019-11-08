@@ -32,7 +32,7 @@
     display: flex;
     width: 50vw;
     justify-content: flex-end;
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
         display: none;
     }
 }
@@ -51,7 +51,7 @@
     display: flex;
     width: 50vw;
     justify-content: flex-end;
-    @media (min-width: 600px) {
+    @media (min-width: 769px) {
         display: none;
     }
 }
@@ -78,8 +78,9 @@ a.mobileNav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: transparent;
+    // background-color: transparent;
     position: fixed;
+    padding-top: 20vh;
     width:10%;
     height:100%;
     top: 0px;
@@ -91,7 +92,7 @@ a.mobileNav {
 #navMenu.active {
     opacity: 1;
     background-color: white;
-    padding-top: 20vh;
+    // padding-top: 20vh;
     width:100%;
     height:100%;
     top:0px;
@@ -110,7 +111,9 @@ p#closeMenu {
     top: 12px;
     right: 30px;
 }
-
+.dropdown {
+    margin-top: -2px;
+}
 .dropdown-content-desktop {
     display: none;
     position: absolute;
