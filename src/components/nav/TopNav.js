@@ -22,7 +22,7 @@ function TopNav() {
                 <div className="navlinks-desktop">
                     <a className="navlink" href="home">All&nbsp;Photos</a>
                     <div className="dropdown">
-                        <a className="dropbtn" onClick={showDropdownContentDesktop} >
+                        <a className="dropbtn" onMouseOver={showDropdownContentDesktop} >
                             Journeys&nbsp;<IoIosArrowDown />
                         </a>
                         <div className="dropdown-content-desktop" id="dropdownContentDesktop">
