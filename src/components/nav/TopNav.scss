@@ -7,6 +7,7 @@
     flex-direction: row;
     width: 100vw;
     min-height: 50px;
+    z-index: 1000;
 }
 
 
@@ -123,9 +124,13 @@ p#closeMenu {
 .dropdown-content-desktop {
     display: none;
     position: absolute;
-    background-color: #ffffff;
+    background-color: #ffffff98;
     min-width: 160px;
-    margin-top: 20px;
+    margin-top: 28px;
+    z-index: 1000;
+    padding: 8px;
+    line-height: 20px;
+    transition: 2s ease-in-out;
 }
 
 .dropdown-content-mobile {
@@ -139,4 +144,5 @@ p#closeMenu {
     display: flex;
     flex-direction: column;
     align-items: left;
+    transition: 2s ease-in-out;
 }
