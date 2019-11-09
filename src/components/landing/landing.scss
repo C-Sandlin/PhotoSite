@@ -12,6 +12,7 @@
     width: 100%;
     height: 100%;
     box-sizing: border-box;
+    position: relative;
     // overflow: hidden;
     padding: 10px 15px 15px 15px;
 
@@ -20,32 +21,63 @@
     }
 }
 
+
+
 .landing-project {
     width: 100%;
     height: 100%;
+    top: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 #newZealand-proj {
-    background: url('https://firebasestorage.googleapis.com/v0/b/photosite-csandlin.appspot.com/o/NewZealand%2FHighRes%2FNZForWeb-1396.jpg?alt=media&token=d2d96472-e4c4-4f2f-8479-d92cd95e48d2') no-repeat center;
-    background-position: bottom;
-    background-size: cover;
-    z-index: 300;
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/photosite-csandlin.appspot.com/o/NewZealand%2FHighRes%2FNZForWeb-1396.jpg?alt=media&token=d2d96472-e4c4-4f2f-8479-d92cd95e48d2');
+    // background-position: bottom;
+    // background-size: cover;
 }
 
 #italy-proj {
-    background: url('https://firebasestorage.googleapis.com/v0/b/photosite-csandlin.appspot.com/o/LandingPage%2FNZForWeb-1848.jpg?alt=media&token=5960a19a-2d25-4886-9c30-7f369ab5babf') no-repeat center;
-    background-position: bottom;
-    background-size: cover;
-    z-index: 301;
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/photosite-csandlin.appspot.com/o/LandingPage%2FTreCime-7.jpg?alt=media&token=5b173139-78f2-4d8e-b79f-b36461065f56');
+    // background-position: bottom;
+    // background-size: cover;
+
+}
+
+#sanDiego-proj {
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/photosite-csandlin.appspot.com/o/LandingPage%2FSanDiegoForWeb-3374.jpg?alt=media&token=456133f6-5487-4db5-b701-a2cba1f204ea');
+    // background-position: bottom;
+    // background-size: cover;
+}
+
+#arizona-proj {
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/photosite-csandlin.appspot.com/o/LandingPage%2FSupai-3182.jpg?alt=media&token=2929c6f1-76f1-4ea0-ab49-d2c7e9c4cdb6');
+    // background-position: bottom;
+    // background-size: cover;
 }
 
 .current {
     opacity: 100;
     display: block;
-    transition: 3s linear;
+    transition: all .6s cubic-bezier(.89,.03,.47,.88);
+    height: 100%;
+    visibility: visible;
+    z-index: 301;
 }
 
-.not-current {
-    display: none;
-    transition: 3s linear;
+.above {
+    height: 0;
+    visibility: hidden;
+    transition: all .6s cubic-bezier(.89,.03,.47,.88);
+    z-index: 300;
 }
+
+.below {
+    height: 0;
+    visibility: hidden;
+    transition: all .6s cubic-bezier(.89,.03,.47,.88);
+    z-index: 300;
+}
+
+// need above current below. All below are class below

@@ -24,19 +24,19 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 50vw;
+    width: 30vw;
 }
 
 .topnav-links-container {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 50vw;
+    width: 70vw;
 }
 
 .navlinks-desktop {
     display: flex;
-    width: 50vw;
+    width: 100%;
     justify-content: flex-end;
     margin-top: 20px;
     @media (max-width: 768px) {
@@ -88,7 +88,7 @@ a.mobileNav {
     // background-color: transparent;
     position: fixed;
     padding-top: 20vh;
-    width:10%;
+    width: 0%;
     height:100%;
     top: 0px;
     right: 0px;
