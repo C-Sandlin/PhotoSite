@@ -16,36 +16,57 @@ export default class LandingPage extends React.Component {
     }
 
     handleScroll = (event) => {
-        console.log(event);
-        let currentProj = event.target.parentElement;
-        let nextProj = currentProj.nextSibling;
-        let prevProj = currentProj.previousSibling;
+        let currentProj;
+        let nextProj;
+        let prevProj;
 
-        // check intertia of downward scroll
-        if (event.deltaY > 120) {
+        let checkIntertia = () => {
+            // check intertia of downward scroll
+            if (event.deltaY > 120) {
 
-            if (nextProj !== null) {
-                currentProj.classList.remove('current');
-                currentProj.classList.add('above');
+                if (nextProj !== null) {
+                    currentProj.classList.remove('current');
+                    currentProj.classList.add('above');
 
-                nextProj.classList.remove('below');
-                nextProj.classList.add('current');
-            } else {
-                return;
+                    nextProj.classList.remove('below');
+                    nextProj.classList.add('current');
+                } else {
+                    return;
+                }
+            }
+
+            // check intertia of upward scroll
+            if (event.deltaY < -120) {
+
+                if (prevProj !== null) {
+                    currentProj.classList.remove('current');
+                    currentProj.classList.add('below');
+
+                    prevProj.classList.remove('above');
+                    prevProj.classList.add('current');
+                }
             }
         }
 
-        // check intertia of upward scroll
-        if (event.deltaY < -120) {
 
-            if (prevProj !== null) {
-                currentProj.classList.remove('current');
-                currentProj.classList.add('below');
+        if (event.target.tagName === 'DIV' && event.target.classList.contains('landing-text')) {
+            console.log('landing-text')
+            currentProj = event.target.parentElement;
+            nextProj = currentProj.nextSibling;
+            prevProj = currentProj.previousSibling;
 
-                prevProj.classList.remove('above');
-                prevProj.classList.add('current');
-            }
+            checkIntertia();
         }
+
+        if (event.target.tagName === 'A' && event.target.parentElement.classList.contains('landing-text')) {
+            console.log('landing-text-child')
+            currentProj = event.target.parentElement.parentElement;
+            nextProj = currentProj.nextSibling;
+            prevProj = currentProj.previousSibling;
+
+            checkIntertia();
+        }
+
     }
 
     render() {
