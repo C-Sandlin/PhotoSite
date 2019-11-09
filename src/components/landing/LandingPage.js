@@ -16,24 +16,34 @@ export default class LandingPage extends React.Component {
     }
 
     handleScroll = (event) => {
-        if (event.deltaY > 120) {
-            let currentProj = event.target;
-            currentProj.classList.remove('current');
-            currentProj.classList.add('not-current');
+        let currentProj = event.target;
 
+        // check intertia of downward scroll
+        if (event.deltaY > 120) {
             let nextProj = currentProj.nextSibling;
-            nextProj.classList.remove('not-current');
-            nextProj.classList.add('current');
+
+            if (nextProj !== null) {
+                currentProj.classList.remove('current');
+                currentProj.classList.add('not-current');
+
+                nextProj.classList.remove('not-current');
+                nextProj.classList.add('current');
+            } else {
+                return;
+            }
         }
 
+        // check intertia of upward scroll
         if (event.deltaY < -120) {
-            let currentProj = event.target;
-            currentProj.classList.remove('current');
-            currentProj.classList.add('not-current');
+            let prevProj = currentProj.previousSibling;
 
-            let nextProj = currentProj.previousSibling;
-            nextProj.classList.remove('not-current');
-            nextProj.classList.add('current');
+            if (prevProj !== null) {
+                currentProj.classList.remove('current');
+                currentProj.classList.add('not-current');
+
+                prevProj.classList.remove('not-current');
+                prevProj.classList.add('current');
+            }
         }
     }
 
