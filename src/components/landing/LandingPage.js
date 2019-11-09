@@ -8,15 +8,16 @@ import "./landing.scss";
 export default class LandingPage extends React.Component {
 
     componentDidMount = () => {
-        document.getElementById('outer-landing').addEventListener('wheel', this.handleScroll, true);
+        window.addEventListener('wheel', this.handleScroll, true);
     }
 
     componentWillUnmount = () => {
-        window.getElementById('outer-landing').removeEventListener('wheel', this.handleScroll);
+        window.removeEventListener('wheel', this.handleScroll);
     }
 
     handleScroll = (event) => {
-        let currentProj = event.target;
+        console.log(event);
+        let currentProj = event.target.parentElement;
         let nextProj = currentProj.nextSibling;
         let prevProj = currentProj.previousSibling;
 
@@ -52,13 +53,25 @@ export default class LandingPage extends React.Component {
             <>
                 <div className="outer-landing" id="outer-landing">
                     <div className="inner-landing" >
-                        <div className="landing-project above" id="newZealand-proj">
+                        <div className="landing-project current" id="newZealand-proj">
+                            <div className="landing-text">
+                                <a href="home" className="TitlingGothicFB-Wide-Standard project-title">NEW ZEALAND</a>
+                            </div>
                         </div>
-                        <div className="landing-project  current" id="sanDiego-proj">
+                        <div className="landing-project  below" id="sanDiego-proj">
+                            <div className="landing-text">
+                                <a href="home" className="TitlingGothicFB-Wide-Standard project-title">NEW ZEALAND</a>
+                            </div>
                         </div>
                         <div className="landing-project  below" id="arizona-proj">
+                            <div className="landing-text">
+                                <a href="home" className="TitlingGothicFB-Wide-Standard project-title">NEW ZEALAND</a>
+                            </div>
                         </div>
                         <div className="landing-project  below" id="italy-proj">
+                            <div className="landing-text">
+                                <a href="home" className="TitlingGothicFB-Wide-Standard project-title">NORTHERN ITALY</a>
+                            </div>
                         </div>
                     </div>
                 </div>
