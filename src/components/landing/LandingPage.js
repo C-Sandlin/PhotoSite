@@ -22,7 +22,7 @@ export default class LandingPage extends React.Component {
 
         let checkIntertia = () => {
             // check intertia of downward scroll
-            if (event.deltaY > 120) {
+            if (event.deltaY > 90) {
 
                 if (nextProj !== null) {
                     currentProj.classList.remove('current');
@@ -36,7 +36,7 @@ export default class LandingPage extends React.Component {
             }
 
             // check intertia of upward scroll
-            if (event.deltaY < -120) {
+            if (event.deltaY < -90) {
 
                 if (prevProj !== null) {
                     currentProj.classList.remove('current');
@@ -50,7 +50,7 @@ export default class LandingPage extends React.Component {
 
 
         if (event.target.tagName === 'DIV' && event.target.classList.contains('landing-text')) {
-            console.log('landing-text')
+
             currentProj = event.target.parentElement;
             nextProj = currentProj.nextSibling;
             prevProj = currentProj.previousSibling;
@@ -59,7 +59,7 @@ export default class LandingPage extends React.Component {
         }
 
         if (event.target.tagName === 'A' && event.target.parentElement.classList.contains('landing-text')) {
-            console.log('landing-text-child')
+
             currentProj = event.target.parentElement.parentElement;
             nextProj = currentProj.nextSibling;
             prevProj = currentProj.previousSibling;
@@ -76,22 +76,22 @@ export default class LandingPage extends React.Component {
                     <div className="inner-landing" >
                         <div className="landing-project current" id="newZealand-proj">
                             <div className="landing-text">
-                                <a href="home" className="TitlingGothicFB-Wide-Standard project-title">NEW ZEALAND</a>
+                                {/* <a href="home" className="TitlingGothicFB-Wide-Standard project-title">NEW ZEALAND</a> */}
                             </div>
                         </div>
                         <div className="landing-project  below" id="sanDiego-proj">
                             <div className="landing-text">
-                                <a href="home" className="TitlingGothicFB-Wide-Standard project-title">NEW ZEALAND</a>
+                                {/* <a href="home" className="TitlingGothicFB-Wide-Standard project-title">NEW ZEALAND</a> */}
                             </div>
                         </div>
                         <div className="landing-project  below" id="arizona-proj">
                             <div className="landing-text">
-                                <a href="home" className="TitlingGothicFB-Wide-Standard project-title">NEW ZEALAND</a>
+                                {/* <a href="home" className="TitlingGothicFB-Wide-Standard project-title">NEW ZEALAND</a> */}
                             </div>
                         </div>
                         <div className="landing-project  below" id="italy-proj">
                             <div className="landing-text">
-                                <a href="home" className="TitlingGothicFB-Wide-Standard project-title">NORTHERN ITALY</a>
+                                {/* <a href="home" className="TitlingGothicFB-Wide-Standard project-title">NORTHERN ITALY</a> */}
                             </div>
                         </div>
                     </div>
