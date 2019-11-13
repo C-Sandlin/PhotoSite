@@ -4,12 +4,21 @@ import mainLogo from "../../assets/cs-main-logo.svg";
 // import { IconContext } from "react-icons";
 import "./landing.scss";
 import ScrollAnimation from 'react-animate-on-scroll';
+import { all } from 'q';
 
 
 export default class LandingPage extends React.Component {
 
+    state = {
+        'newZealand-proj': "active",
+        'sanDiego-proj': "inactive",
+        'italy-proj': "inactive",
+        'arizona-proj': "inactive"
+    }
+
     componentDidMount = () => {
         window.addEventListener('wheel', this.handleScroll, true);
+        this.checkStatus();
     }
 
     componentWillUnmount = () => {
@@ -20,6 +29,7 @@ export default class LandingPage extends React.Component {
         let currentProj;
         let nextProj;
         let prevProj;
+        var newState = {};
 
         let checkIntertia = () => {
             // check intertia of downward scroll
@@ -31,6 +41,12 @@ export default class LandingPage extends React.Component {
 
                     nextProj.classList.remove('below');
                     nextProj.classList.add('current');
+
+                    // new stuff
+                    newState[nextProj.id] = "active";
+                    newState[currentProj.id] = "inactive"
+                    this.setState(newState);
+                    this.checkStatus();
                 } else {
                     return;
                 }
@@ -45,6 +61,14 @@ export default class LandingPage extends React.Component {
 
                     prevProj.classList.remove('above');
                     prevProj.classList.add('current');
+
+                    newState[prevProj.id] = "active";
+                    newState[currentProj.id] = "inactive"
+                    this.setState(newState);
+                    this.checkStatus();
+
+                } else {
+                    return;
                 }
             }
         }
@@ -70,7 +94,16 @@ export default class LandingPage extends React.Component {
 
     }
 
+    checkStatus = () => {
+
+        if (this.state["arizona-proj"] === "active") {
+            console.log('arizona-active')
+        }
+
+    }
+
     render() {
+
         return (
             <>
                 <div className="outer-landing" id="outer-landing">
@@ -83,20 +116,16 @@ export default class LandingPage extends React.Component {
                         </div>
                         <div className="landing-project  below" id="sanDiego-proj">
                             <div className="landing-text">
-
                                 <a href="home" className="project-title">San Diego</a>
-
                                 <a href="home" className="project-subtitle">California</a>
                             </div>
                         </div>
                         <div className="landing-project  below" id="arizona-proj">
                             <div className="landing-text">
-                                {/* <a href="home" className="TitlingGothicFB-Cond-Standard project-title">Supai</a> */}
                             </div>
                         </div>
                         <div className="landing-project  below" id="italy-proj">
                             <div className="landing-text">
-                                {/* <a href="home" className="TitlingGothicFB-Cond-Standard project-title">Northern<br></br>Italy</a> */}
                             </div>
                         </div>
                     </div>
