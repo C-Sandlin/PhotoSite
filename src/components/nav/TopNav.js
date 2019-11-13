@@ -22,7 +22,7 @@ function TopNav() {
                 <div className="navlinks-desktop">
                     <a className="navlink" href="home">All&nbsp;Photos</a>
                     <div className="dropdown">
-                        <a className="dropbtn" onMouseOver={showDropdownContentDesktop} >
+                        <a className="dropbtn" >
                             Journeys&nbsp;<IoIosArrowDown />
                         </a>
                         <div className="dropdown-content-desktop" id="dropdownContentDesktop">
@@ -42,7 +42,7 @@ function TopNav() {
                     </p>
                     <a href="home" className="navlink mobileNav">All Photos</a>
                     <div className="dropdown">
-                        <a className="dropbtn mobileNav" onClick={showDropdownContentMobile}>
+                        <a className="dropbtn mobileNav" >
                             Journeys
                         </a>
                         <div className="dropdown-content-mobile" id="dropdownContentMobile">
@@ -70,19 +70,19 @@ function showMobileMenu() {
     }
 }
 
-function showDropdownContentDesktop() {
-    let dropContent = document.getElementById("dropdownContentDesktop");
-    if (dropContent.className === "dropdown-content-desktop") {
-        dropContent.className += " showContent";
-    } else {
-        dropContent.className = "dropdown-content-desktop";
-    }
-}
+// function showDropdownContentDesktop() {
+//     let dropContent = document.getElementById("dropdownContentDesktop");
+//     if (dropContent.className === "dropdown-content-desktop") {
+//         dropContent.className += " showContent";
+//     } else {
+//         dropContent.className = "dropdown-content-desktop";
+//     }
+// }
 
 function showDropdownContentMobile() {
     let dropContent = document.getElementById("dropdownContentMobile");
     if (dropContent.className === "dropdown-content-mobile") {
-        dropContent.className += " showContent";
+        dropContent.className += " hover";
     } else {
         dropContent.className = "dropdown-content-mobile";
     }
