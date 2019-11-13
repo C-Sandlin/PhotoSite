@@ -3,6 +3,7 @@ import mainLogo from "../../assets/cs-main-logo.svg";
 // import { IoIosCloseCircleOutline, IoIosArrowDown } from "react-icons/io";
 // import { IconContext } from "react-icons";
 import "./landing.scss";
+import ScrollAnimation from 'react-animate-on-scroll';
 
 
 export default class LandingPage extends React.Component {
@@ -76,22 +77,26 @@ export default class LandingPage extends React.Component {
                     <div className="inner-landing" >
                         <div className="landing-project current" id="newZealand-proj">
                             <div className="landing-text">
-                                {/* <a href="home" className="TitlingGothicFB-Wide-Standard project-title">NEW ZEALAND</a> */}
+                                <a href="home" className="project-title">New Zealand</a>
+                                <a href="home" className="project-subtitle">South Island Road Trip</a>
                             </div>
                         </div>
                         <div className="landing-project  below" id="sanDiego-proj">
                             <div className="landing-text">
-                                {/* <a href="home" className="TitlingGothicFB-Wide-Standard project-title">NEW ZEALAND</a> */}
+
+                                <a href="home" className="project-title">San Diego</a>
+
+                                <a href="home" className="project-subtitle">California</a>
                             </div>
                         </div>
                         <div className="landing-project  below" id="arizona-proj">
                             <div className="landing-text">
-                                {/* <a href="home" className="TitlingGothicFB-Wide-Standard project-title">NEW ZEALAND</a> */}
+                                {/* <a href="home" className="TitlingGothicFB-Cond-Standard project-title">Supai</a> */}
                             </div>
                         </div>
                         <div className="landing-project  below" id="italy-proj">
                             <div className="landing-text">
-                                {/* <a href="home" className="TitlingGothicFB-Wide-Standard project-title">NORTHERN ITALY</a> */}
+                                {/* <a href="home" className="TitlingGothicFB-Cond-Standard project-title">Northern<br></br>Italy</a> */}
                             </div>
                         </div>
                     </div>

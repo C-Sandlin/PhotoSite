@@ -78,14 +78,34 @@
     flex-direction: column;
     align-content: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .project-title {
-    font-size: 6rem;
-    color: white;
+    font-size: 5rem;
+    color: rgb(255, 255, 255);
     text-decoration: none;
-    -webkit-text-fill-color: rgba(255, 255, 255, 0.118); /* Will override color (regardless of order) */
-    -webkit-text-stroke-width: 1px;
+    text-transform: uppercase;
+    font-family: titling-gothic-fb-extended;
+    font-weight: 300;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0); /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1.5px;
     -webkit-text-stroke-color: white;
-    letter-spacing: 1rem;
+    letter-spacing: .0rem;
+    line-height: 6rem;
+    align-self: center;
+    text-align: center;
+}
+
+.project-subtitle {
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: titling-gothic-fb-condensed;
+    font-weight: 200;
+    letter-spacing: .2rem;
+    line-height: 2rem;
+    margin-top: 1rem;
+    align-self: center;
 }
