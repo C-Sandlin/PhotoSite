@@ -17,6 +17,16 @@ export default class LandingPage extends React.Component {
 
     componentDidMount = () => {
         window.addEventListener('wheel', this.handleScroll, true);
+
+        let landingText = document.querySelectorAll('.landing-text');
+        landingText.forEach(text => {
+            text.addEventListener('mousemove', (e) => {
+                if (text.firstElementChild) {
+                    text.firstElementChild.style.backgroundPositionX = -(e.offsetY / 5) + "px";
+                    text.firstElementChild.style.backgroundPositionY = -(e.offsetX / 5) + "px";
+                }
+            })
+        })
         this.checkStatus();
     }
 
@@ -82,7 +92,7 @@ export default class LandingPage extends React.Component {
             checkIntertia();
         }
 
-        if (event.target.tagName === 'A' && event.target.parentElement.classList.contains('landing-text')) {
+        if (event.target.tagName === 'P' && event.target.parentElement.classList.contains('landing-text')) {
 
             currentProj = event.target.parentElement.parentElement;
             nextProj = currentProj.nextSibling;
@@ -110,24 +120,29 @@ export default class LandingPage extends React.Component {
                     <div className="inner-landing" >
                         <div className="landing-project current" id="newZealand-proj">
                             <div className="landing-text">
-                                {/* <a href="home" className="project-title">New Zealand</a>
-                                <a href="home" className="project-subtitle">South Island Road Trip</a> */}
+                                <p className="project-title" id="NZTitle">New Zealand</p>
+                                <p className="project-subtitle">South Island Road Trip</p>
                             </div>
                         </div>
                         <div className="landing-project  below" id="sanDiego-proj">
                             <div className="landing-text">
-                                {/* <a href="home" className="project-title">San Diego</a>
-                                <a href="home" className="project-subtitle">California</a> */}
+                                <p className="project-title" id="SDTitle">San Diego</p>
+                                <p className="project-subtitle">La Jolla, Mission Beach, Sunset Cliffs</p>
                             </div>
                         </div>
                         <div className="landing-project  below" id="arizona-proj">
                             <div className="landing-text">
+                                <p className="project-title" id="AZTitle">Arizona</p>
+                                <p className="project-subtitle">Havasupi Falls & The Grand Canyon</p>
                             </div>
                         </div>
                         <div className="landing-project  below" id="italy-proj">
                             <div className="landing-text">
+                                <p className="project-title" id="ITTitle">Northern Italy</p>
+                                <p className="project-subtitle">South Tyrol & Venice</p>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </>

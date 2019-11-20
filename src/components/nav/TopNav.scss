@@ -149,7 +149,7 @@ p#closeMenu:hover, p#closeMenu:focus {
     position: absolute;
     background-color: transparent;
     min-width: 160px;
-    margin-left: -10px;
+    margin-left: 10px;
     z-index: 1000;
     padding: 8px;
     line-height: 20px;
@@ -190,4 +190,12 @@ p#closeMenu:hover, p#closeMenu:focus {
     flex-direction: column;
     align-items: left;
     transition: 2s ease-in-out;
+}
+
+.link-numbers {
+    font-size: 7px;
+    color: rgb(0, 115, 255);
+    margin-right: 5px;
+    line-height: 3em;
+    vertical-align: middle;
 }

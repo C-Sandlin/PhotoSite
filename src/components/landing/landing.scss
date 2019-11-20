@@ -1,3 +1,5 @@
+@import "../../styles/variables.scss";
+
 .outer-landing {
     width: 100vw;
     height: calc(100vh - 30px);
@@ -33,19 +35,19 @@
 }
 
 #newZealand-proj {
-    background-image: url('https://firebasestorage.googleapis.com/v0/b/photosite-csandlin.appspot.com/o/NewZealand%2FHighRes%2FNZForWeb-1396.jpg?alt=media&token=d2d96472-e4c4-4f2f-8479-d92cd95e48d2');
+    background-image: url($NZImage);
 }
 
 #italy-proj {
-    background-image: url('https://firebasestorage.googleapis.com/v0/b/photosite-csandlin.appspot.com/o/LandingPage%2FTreCime-7.jpg?alt=media&token=5b173139-78f2-4d8e-b79f-b36461065f56');
+    background-image: url($ITImage);
 }
 
 #sanDiego-proj {
-    background-image: url('https://firebasestorage.googleapis.com/v0/b/photosite-csandlin.appspot.com/o/LandingPage%2FSanDiegoForWeb-3374.jpg?alt=media&token=456133f6-5487-4db5-b701-a2cba1f204ea');
+    background-image: url($SDImage);
 }
 
 #arizona-proj {
-    background-image: url('https://firebasestorage.googleapis.com/v0/b/photosite-csandlin.appspot.com/o/LandingPage%2FSupai-3182.jpg?alt=media&token=2929c6f1-76f1-4ea0-ab49-d2c7e9c4cdb6');
+    background-image: url($AZImage);
 }
 
 .current {
@@ -83,18 +85,52 @@
 
 .project-title {
     font-size: 5rem;
-    color: rgb(255, 255, 255);
+    // color: rgb(255, 255, 255);
     text-decoration: none;
     text-transform: uppercase;
     font-family: titling-gothic-fb-extended;
     font-weight: 300;
-    -webkit-text-fill-color: rgba(255, 255, 255, 0); /* Will override color (regardless of order) */
-    -webkit-text-stroke-width: 1.5px;
-    -webkit-text-stroke-color: white;
+    // -webkit-text-fill-color: rgba(255, 255, 255, 0); /* Will override color (regardless of order) */
+    // -webkit-text-stroke-width: 1.5px;
+    // -webkit-text-stroke-color: white;
     letter-spacing: .0rem;
     line-height: 6rem;
     align-self: center;
     text-align: center;
+    cursor: pointer;
+    margin-bottom: 0px;
+}
+
+#NZTitle {
+    background: url($NZImage) no-repeat;
+    background-size: 80vw auto;
+    background-position: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#SDTitle {
+    background: url($SDImage) no-repeat;
+    background-size: 80vw auto;
+    background-position: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#AZTitle {
+    background: url($AZImage) no-repeat;
+    background-size: 80vw auto;
+    background-position: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#ITTitle {
+    background: url($ITImage) no-repeat;
+    background-size: 80vw auto;
+    background-position: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .project-subtitle {
@@ -108,4 +144,5 @@
     line-height: 2rem;
     margin-top: 1rem;
     align-self: center;
+    cursor: pointer;
 }
