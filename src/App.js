@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App" id="outermost-app">
       <Route exact path="/home">
-        <TopNav />
+        {/* <TopNav /> */}
         <LandingPage />
       </Route>
       <Route exact path="/journeys">
