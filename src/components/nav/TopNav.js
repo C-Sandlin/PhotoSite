@@ -20,19 +20,22 @@ function TopNav() {
                         </IconContext.Provider></a>
                 </div>
                 <div className="navlinks-desktop">
-                    <a className="navlink" href="home">All&nbsp;Photos</a>
+                    <a className="navlink" href="home"><span className="link-numbers">01</span>All&nbsp;Photos</a>
                     <div className="dropdown">
                         <a className="dropbtn" >
+                            <span className="link-numbers">02</span>
                             Journeys&nbsp;<IoIosArrowDown />
                         </a>
                         <div className="dropdown-content-desktop" id="dropdownContentDesktop">
-                            <a href="home">Link 1</a>
-                            <a href="home">Link 2</a>
-                            <a href="home">Link 3</a>
+                            <a href="home">New Zealand</a>
+                            <a href="home">Northern Italy</a>
+                            <a href="home">San Diego</a>
+                            <a href="home">Arizona</a>
+                            <a href="home">Yosemite</a>
                         </div>
                     </div>
-                    <a href="home" className="navlink">Prints</a>
-                    <a href="home" className="navlink">About&nbsp;Me</a>
+                    <a href="home" className="navlink"><span className="link-numbers">03</span>Prints</a>
+                    <a href="home" className="navlink"><span className="link-numbers">04</span>About&nbsp;Me</a>
                 </div>
                 <div className="nav-menu-mobile" id="navMenu">
                     <p onClick={showMobileMenu} id="closeMenu">
@@ -41,21 +44,23 @@ function TopNav() {
                         </IconContext.Provider>
                     </p>
                     <div className="mobile-nav-div">
-                        <a href="home" className="navlink mobileNav">All Photos</a>
+                        <a href="home" className="navlink mobileNav"><span className="link-numbers">01</span>All Photos</a>
                     </div>
                     <div className="dropdown-mobile mobile-nav-div" >
-                        <p className="dropbtn mobileNav" >Journeys</p>
+                        <p className="dropbtn mobileNav" ><span className="link-numbers">02</span>Journeys</p>
                         <div className="dropdown-content-mobile" id="dropdownContentMobile">
-                            <a href="home" className="mobileNav">Link 1</a>
-                            <a href="home" className="mobileNav">Link 2</a>
-                            <a href="home" className="mobileNav">Link 3</a>
+                            <a href="home" className="mobileNav">New Zealand</a>
+                            <a href="home" className="mobileNav">Northern Italy</a>
+                            <a href="home" className="mobileNav">San Diego</a>
+                            <a href="home" className="mobileNav">Arizona</a>
+                            <a href="home" className="mobileNav">Yosemite</a>
                         </div>
                     </div>
                     <div className="mobile-nav-div">
-                        <a href="home" className="navlink mobileNav">Prints</a>
+                        <a href="home" className="navlink mobileNav"><span className="link-numbers">03</span>Prints</a>
                     </div>
                     <div className="mobile-nav-div">
-                        <a href="home" className="navlink mobileNav">About Me</a>
+                        <a href="home" className="navlink mobileNav"><span className="link-numbers">04</span>About Me</a>
                     </div>
                 </div>
             </div>
