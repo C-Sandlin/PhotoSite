@@ -61,9 +61,7 @@
 }
 
 .navlinks-mobile {
-    display: flex;
-    width: 50vw;
-    justify-content: flex-end;
+    display: block;
     @media (min-width: 769px) {
         display: none;
     }
@@ -76,58 +74,67 @@
     text-transform: uppercase;
 }
 
+.mobile-nav-div {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.029);
+}
+
 a.mobileNav {
     font-family: $secondaryFont;
     font-size: 1rem;
-    text-transform: uppercase;
     text-decoration: none;
-    letter-spacing: .1rem;
-    color: black;
+    color: rgba(0, 0, 0, 0.625);
     line-height: 50px;
+    margin: 30px;
 }
 
 #navMenu {
     opacity: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    // background-color: transparent;
+    width:0%;
+    height: 0%;
+    display: none;
     position: fixed;
-    padding-top: 20vh;
-    width: 0%;
-    height:100%;
     top: 0px;
     right: 0px;
+    background-color: $primaryColor;
     z-index:1000;
     transition: .3s cubic-bezier(0.39, 0.575, 0.565, 1);
+
+    padding-top: 10vh;
+    overflow-x: hidden;
+    visibility: hidden;
 }
 
 #navMenu.active {
+    width: 100%;
+    height: 100%;
+    display: block;
     opacity: 1;
-    background-color: white;
-    // padding-top: 20vh;
-    width:100%;
-    height:100%;
-    top:0px;
-    left:0px;
+    visibility: visible;
     transition: .3s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 p#closeMenu {
+    margin-top: 10px;
     position: absolute;
     top: 0px;
-    right: 15px;
+    right: 7px;
+    color: black;
+}
+
+p#closeMenu:hover, p#closeMenu:focus {
+    color: white;
 }
 
 .hamburger {
     position: absolute;
-    top: 12px;
+    top: 18px;
     right: 15px;
 }
 .dropdown {
-    margin-top: -2px;
+  margin-top: -2px;
 }
-
 
 
 .dropdown-content-desktop {
@@ -146,11 +153,15 @@ p#closeMenu {
 .dropdown-content-mobile {
     display: none;
     position: relative;
-    background-color: #f1f1f1;
+    background-color: #00000025;
     box-shadow: 0px 8px 16;
 }
 
-.dropdown:hover .dropdown-content-desktop, .dropdown:hover .dropdown-content-mobile{
+.dropdown-content-mobile .showit {
+    display: flex;
+}
+
+.dropdown:hover .dropdown-content-desktop {
     display: flex;
     flex-direction: column;
     align-items: left;
@@ -163,10 +174,3 @@ p#closeMenu {
     align-items: left;
     transition: 2s ease-in-out;
 }
-
-// .showContent {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: left;
-//     transition: 2s ease-in-out;
-// }
