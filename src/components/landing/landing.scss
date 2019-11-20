@@ -1,10 +1,10 @@
 .outer-landing {
     width: 100vw;
-    height: calc(100vh - 50px);
+    height: calc(100vh - 30px);
     position: relative;
     // overflow: hidden;
     @media (min-width: 769px) {
-        height: calc(100vh - 80px);
+        height: calc(100vh - 60px);
     }
 }
 
@@ -14,10 +14,10 @@
     box-sizing: border-box;
     position: relative;
     // overflow: hidden;
-    padding: 10px 15px 15px 15px;
+    padding: 15px 15px 0px 15px;
 
     @media (min-width: 769px) {
-        padding: 20px 30px 30px 30px;
+        padding: 20px 20px 0px 20px;
     }
 }
 

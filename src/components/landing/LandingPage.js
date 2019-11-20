@@ -3,6 +3,7 @@ import mainLogo from "../../assets/cs-main-logo.svg";
 import "./landing.scss";
 import ScrollAnimation from 'react-animate-on-scroll';
 import { all } from 'q';
+import TopNav from '../nav/TopNav';
 
 
 export default class LandingPage extends React.Component {
@@ -105,6 +106,7 @@ export default class LandingPage extends React.Component {
         return (
             <>
                 <div className="outer-landing" id="outer-landing">
+                    <TopNav />
                     <div className="inner-landing" >
                         <div className="landing-project current" id="newZealand-proj">
                             <div className="landing-text">
