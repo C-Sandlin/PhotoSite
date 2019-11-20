@@ -1,7 +1,5 @@
 import React from 'react';
 import mainLogo from "../../assets/cs-main-logo.svg";
-// import { IoIosCloseCircleOutline, IoIosArrowDown } from "react-icons/io";
-// import { IconContext } from "react-icons";
 import "./landing.scss";
 import ScrollAnimation from 'react-animate-on-scroll';
 import { all } from 'q';
