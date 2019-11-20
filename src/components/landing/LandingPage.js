@@ -108,14 +108,14 @@ export default class LandingPage extends React.Component {
                     <div className="inner-landing" >
                         <div className="landing-project current" id="newZealand-proj">
                             <div className="landing-text">
-                                <a href="home" className="project-title">New Zealand</a>
-                                <a href="home" className="project-subtitle">South Island Road Trip</a>
+                                {/* <a href="home" className="project-title">New Zealand</a>
+                                <a href="home" className="project-subtitle">South Island Road Trip</a> */}
                             </div>
                         </div>
                         <div className="landing-project  below" id="sanDiego-proj">
                             <div className="landing-text">
-                                <a href="home" className="project-title">San Diego</a>
-                                <a href="home" className="project-subtitle">California</a>
+                                {/* <a href="home" className="project-title">San Diego</a>
+                                <a href="home" className="project-subtitle">California</a> */}
                             </div>
                         </div>
                         <div className="landing-project  below" id="arizona-proj">

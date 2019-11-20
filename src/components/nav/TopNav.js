@@ -43,8 +43,8 @@ function TopNav() {
                     <div className="mobile-nav-div">
                         <a href="home" className="navlink mobileNav">All Photos</a>
                     </div>
-                    <div className="dropdown-mobile mobile-nav-div" onClick={toggleMobileDropDown} >
-                        <a className="dropbtn mobileNav" >Journeys&nbsp;<IoIosArrowDown /></a>
+                    <div className="dropdown-mobile mobile-nav-div" >
+                        <p className="dropbtn mobileNav" >Journeys</p>
                         <div className="dropdown-content-mobile" id="dropdownContentMobile">
                             <a href="home" className="mobileNav">Link 1</a>
                             <a href="home" className="mobileNav">Link 2</a>
@@ -73,6 +73,12 @@ function showMobileMenu() {
     }
 }
 
-function toggleMobileDropDown() {
+// function toggleMobileDropDown() {
+//     let mobileDropDiv = document.querySelector('#dropdownContentMobile');
 
-}
+//     if (mobileDropDiv.className === "dropdown-content-mobile") {
+//         mobileDropDiv.className += " showit";
+//     } else if (mobileDropDiv.className === "dropdown-content-mobile showit") {
+//         mobileDropDiv.className = "dropdown-content-mobile";
+//     }
+// } 
