@@ -1,5 +1,6 @@
 import React from 'react';
-import mainLogo from "../../assets/cs-main-logo.svg";
+// import mainLogo from "../../assets/cs-main-logo.svg";
+import mainLogo from "../../assets/Logo_Lockup.svg";
 import { IoIosClose, IoIosArrowDown, IoMdMenu } from "react-icons/io";
 import { IconContext } from "react-icons";
 import "./TopNav.scss"
@@ -8,7 +9,7 @@ function TopNav() {
     return (
         <div className="topnav" id="myTopnav">
             <div className="topnav-logo-container">
-                <a href="home">
+                <a href="/home">
                     <img src={mainLogo} className="mainLogo" alt="Colin Sandlin Photography"></img>
                 </a>
             </div>
@@ -17,21 +18,24 @@ function TopNav() {
                     <a className="hamburger" onClick={showMobileMenu} >
                         <IconContext.Provider value={{ style: { fontSize: '25px' } }}>
                             <IoMdMenu />
-                        </IconContext.Provider></a>
+                        </IconContext.Provider>
+                    </a>
                 </div>
                 <div className="navlinks-desktop">
-                    <a className="navlink" href="home"><span className="link-numbers">01</span>All&nbsp;Photos</a>
+                    <a className="navlink" href="/allPhotos"><span className="link-numbers">01</span>All&nbsp;Photos</a>
                     <div className="dropdown">
-                        <a className="dropbtn" >
+                        <a className="dropbtn">
                             <span className="link-numbers">02</span>
                             Journeys&nbsp;<IoIosArrowDown />
                         </a>
                         <div className="dropdown-content-desktop" id="dropdownContentDesktop">
-                            <a href="home">New Zealand</a>
-                            <a href="home">Northern Italy</a>
-                            <a href="home">San Diego</a>
-                            <a href="home">Arizona</a>
-                            <a href="home">Yosemite</a>
+                            <a href="/journeys/NewZealand">New Zealand</a>
+                            <a href="/journeys/NorthernItaly">Northern Italy</a>
+                            <a href="/journeys/Yosemite">Yosemite</a>
+                            <a href="/journeys/SanDiego">San Diego</a>
+                            <a href="/journeys/Arizona">Arizona</a>
+                            <a href="/journeys/Yellowstone">Yellowstone</a>
+                            <a href="/journeys/Oregon">Oregon</a>
                         </div>
                     </div>
                     <a href="home" className="navlink"><span className="link-numbers">03</span>Prints</a>
@@ -49,11 +53,13 @@ function TopNav() {
                     <div className="dropdown-mobile mobile-nav-div" >
                         <p className="dropbtn mobileNav" ><span className="link-numbers">02</span>Journeys</p>
                         <div className="dropdown-content-mobile" id="dropdownContentMobile">
-                            <a href="home" className="mobileNav">New Zealand</a>
-                            <a href="home" className="mobileNav">Northern Italy</a>
-                            <a href="home" className="mobileNav">San Diego</a>
-                            <a href="home" className="mobileNav">Arizona</a>
-                            <a href="home" className="mobileNav">Yosemite</a>
+                            <a href="/journeys/NewZealand" className="mobileNav">New Zealand</a>
+                            <a href="/journeys/NorthernItaly" className="mobileNav">Northern Italy</a>
+                            <a href="/journeys/Yosemite" className="mobileNav">Yosemite</a>
+                            <a href="/journeys/SanDiego" className="mobileNav">San Diego</a>
+                            <a href="/journeys/Arizona" className="mobileNav">Arizona</a>
+                            <a href="/journeys/Yellowstone" className="mobileNav">Yellowstone</a>
+                            <a href="/journeys/Oregon" className="mobileNav">Oregon</a>
                         </div>
                     </div>
                     <div className="mobile-nav-div">
@@ -77,13 +83,3 @@ function showMobileMenu() {
         linkgroup.className = "nav-menu-mobile";
     }
 }
-
-// function toggleMobileDropDown() {
-//     let mobileDropDiv = document.querySelector('#dropdownContentMobile');
-
-//     if (mobileDropDiv.className === "dropdown-content-mobile") {
-//         mobileDropDiv.className += " showit";
-//     } else if (mobileDropDiv.className === "dropdown-content-mobile showit") {
-//         mobileDropDiv.className = "dropdown-content-mobile";
-//     }
-// } 
