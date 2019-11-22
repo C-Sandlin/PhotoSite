@@ -4,15 +4,16 @@ import "./landing.scss";
 import ScrollAnimation from 'react-animate-on-scroll';
 import { all } from 'q';
 import TopNav from '../nav/TopNav';
+import BottomNav from '../nav/BottomNav'
 
 
 export default class LandingPage extends React.Component {
 
     state = {
-        'newZealand-proj': "active",
-        'sanDiego-proj': "inactive",
-        'italy-proj': "inactive",
-        'arizona-proj': "inactive"
+        newZealand: "active",
+        sanDiego: "inactive",
+        italy: "inactive",
+        arizona: "inactive"
     }
 
     componentDidMount = () => {
@@ -52,8 +53,8 @@ export default class LandingPage extends React.Component {
                     nextProj.classList.add('current');
 
                     // new stuff
-                    newState[nextProj.id] = "active";
-                    newState[currentProj.id] = "inactive"
+                    newState[nextProj.id.split("-")[0]] = "active";
+                    newState[currentProj.id.split("-")[0]] = "inactive"
                     this.setState(newState);
                     this.checkStatus();
                 } else {
@@ -71,8 +72,8 @@ export default class LandingPage extends React.Component {
                     prevProj.classList.remove('above');
                     prevProj.classList.add('current');
 
-                    newState[prevProj.id] = "active";
-                    newState[currentProj.id] = "inactive"
+                    newState[prevProj.id.split("-")[0]] = "active";
+                    newState[currentProj.id.split("-")[0]] = "inactive"
                     this.setState(newState);
                     this.checkStatus();
 
@@ -112,7 +113,6 @@ export default class LandingPage extends React.Component {
     }
 
     render() {
-
         return (
             <>
                 <div className="outer-landing" id="outer-landing">
@@ -120,13 +120,13 @@ export default class LandingPage extends React.Component {
                     <div className="inner-landing" >
                         <div className="landing-project current" id="newZealand-proj">
                             <div className="landing-text">
-                                <p className="project-title" id="NZTitle">New<br class="mobile-break"></br> Zealand</p>
+                                <p className="project-title" id="NZTitle">New Zealand</p>
                                 <p className="project-subtitle">South Island Road Trip</p>
                             </div>
                         </div>
                         <div className="landing-project  below" id="sanDiego-proj">
                             <div className="landing-text">
-                                <p className="project-title" id="SDTitle">San<br class="mobile-break"></br> Diego</p>
+                                <p className="project-title" id="SDTitle">San Diego</p>
                                 <p className="project-subtitle">La Jolla, Mission Beach, Sunset Cliffs</p>
                             </div>
                         </div>
@@ -138,12 +138,13 @@ export default class LandingPage extends React.Component {
                         </div>
                         <div className="landing-project  below" id="italy-proj">
                             <div className="landing-text">
-                                <p className="project-title" id="ITTitle">Northern <br class="mobile-break"></br>Italy</p>
-                                <p className="project-subtitle">South Tyrol & Venice</p>
+                                <p className="project-title" id="ITTitle">Northern Italy</p>
+                                <p className="project-subtitle">South Tyrol<br class="mobile-break"></br> & Venice</p>
                             </div>
                         </div>
 
                     </div>
+                    <BottomNav />
                 </div>
             </>
         )

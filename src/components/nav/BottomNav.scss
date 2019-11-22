@@ -1,0 +1,30 @@
+.BottomNav {
+    display: none;
+
+    @media (min-width: 769px) {
+        display: flex;
+        flex-direction: row;
+        height: 60px;
+        padding: 0px 20px 0px 20px;
+    }
+}
+
+.left-container {
+    display: flex;
+    flex: 1;
+    padding-left: 20px;
+}
+
+.right-container {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.social-icon {
+    align-self: center;
+    padding: 15px;
+    color: rgb(169, 169, 169);
+}
