@@ -8,6 +8,14 @@ $primaryFont: 'Big Shoulders Display', cursive;
 
 $secondaryFont: 'caslons-egyptian', sans-serif;
 
+h6 {
+   font-family: titling-gothic-fb-narrow, sans-serif;
+    font-weight: 400;
+    font-size: .2em;
+    // text-transform: uppercase;
+    color: rgb(175, 175, 175);
+}
+
 $NZImage: 'https://firebasestorage.googleapis.com/v0/b/photosite-csandlin.appspot.com/o/NewZealand%2FHighRes%2FNZForWeb-1396.jpg?alt=media&token=d2d96472-e4c4-4f2f-8479-d92cd95e48d2';
 
 $SDImage: 'https://firebasestorage.googleapis.com/v0/b/photosite-csandlin.appspot.com/o/LandingPage%2FSanDiegoForWeb-3374.jpg?alt=media&token=456133f6-5487-4db5-b701-a2cba1f204ea';
