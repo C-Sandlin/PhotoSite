@@ -1,7 +1,7 @@
 import React from 'react';
 import TopNav from "../nav/TopNav"
 
-function NewZealand() {
+function Yellowstone() {
     return (
         <>
             <div className="outer-landing" id="outer-landing">
@@ -11,11 +11,11 @@ function NewZealand() {
                     <br></br>
                     <br></br>
                     <br></br>
-                    <h1>New Zealand</h1>
+                    <h1>Yellowstone</h1>
                 </div>
             </div>
         </>
     );
 }
 
-export default NewZealand;
+export default Yellowstone;

@@ -120,13 +120,13 @@ export default class LandingPage extends React.Component {
                     <div className="inner-landing" >
                         <div className="landing-project current" id="newZealand-proj">
                             <div className="landing-text">
-                                <p className="project-title" id="NZTitle">New Zealand</p>
+                                <p className="project-title" id="NZTitle">New<br class="mobile-break"></br> Zealand</p>
                                 <p className="project-subtitle">South Island Road Trip</p>
                             </div>
                         </div>
                         <div className="landing-project  below" id="sanDiego-proj">
                             <div className="landing-text">
-                                <p className="project-title" id="SDTitle">San Diego</p>
+                                <p className="project-title" id="SDTitle">San<br class="mobile-break"></br> Diego</p>
                                 <p className="project-subtitle">La Jolla, Mission Beach, Sunset Cliffs</p>
                             </div>
                         </div>
@@ -138,7 +138,7 @@ export default class LandingPage extends React.Component {
                         </div>
                         <div className="landing-project  below" id="italy-proj">
                             <div className="landing-text">
-                                <p className="project-title" id="ITTitle">Northern Italy</p>
+                                <p className="project-title" id="ITTitle">Northern <br class="mobile-break"></br>Italy</p>
                                 <p className="project-subtitle">South Tyrol & Venice</p>
                             </div>
                         </div>
