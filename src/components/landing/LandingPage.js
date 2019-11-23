@@ -112,6 +112,10 @@ export default class LandingPage extends React.Component {
 
     }
 
+    sendTo = (location) => {
+        this.props.history.push(`/photos/${location}`);
+    }
+
     render() {
         return (
             <>
@@ -120,29 +124,44 @@ export default class LandingPage extends React.Component {
                     <div className="inner-landing" >
                         <div className="landing-project current" id="newZealand-proj">
                             <div className="landing-text">
-                                <p className="project-title" id="NZTitle">New Zealand</p>
-                                <p className="project-subtitle">South Island Road Trip</p>
+                                <p className="project-title" id="NZTitle" onClick={() => this.sendTo("newZealand")}>
+                                    New Zealand
+                                </p>
+                                <p className="project-subtitle" onClick={() => this.sendTo("newZealand")}>
+                                    South Island Road Trip
+                                </p>
                             </div>
                         </div>
                         <div className="landing-project  below" id="sanDiego-proj">
                             <div className="landing-text">
-                                <p className="project-title" id="SDTitle">San Diego</p>
-                                <p className="project-subtitle">La Jolla, Mission Beach, Sunset Cliffs</p>
+                                <p className="project-title" id="SDTitle" onClick={() => this.sendTo("sanDiego")}>
+                                    San Diego
+                                </p>
+                                <p className="project-subtitle" onClick={() => this.sendTo("sanDiego")}>
+                                    La Jolla, Mission Beach, Sunset Cliffs
+                                </p>
                             </div>
                         </div>
                         <div className="landing-project  below" id="arizona-proj">
                             <div className="landing-text">
-                                <p className="project-title" id="AZTitle">Arizona</p>
-                                <p className="project-subtitle">Havasupi Falls & The Grand Canyon</p>
+                                <p className="project-title" id="AZTitle" onClick={() => this.sendTo("arizona")}>
+                                    Arizona
+                                </p>
+                                <p className="project-subtitle" onClick={() => this.sendTo("arizona")}>
+                                    Havasupi Falls & The Grand Canyon
+                                </p>
                             </div>
                         </div>
                         <div className="landing-project  below" id="italy-proj">
                             <div className="landing-text">
-                                <p className="project-title" id="ITTitle">Northern Italy</p>
-                                <p className="project-subtitle">South Tyrol<br class="mobile-break"></br> & Venice</p>
+                                <p className="project-title" id="ITTitle" onClick={() => this.sendTo("northernItaly")}>
+                                    Northern Italy
+                                </p>
+                                <p className="project-subtitle" onClick={() => this.sendTo("northernItaly")}>
+                                    South Tyrol<br class="mobile-break"></br> & Venice
+                                </p>
                             </div>
                         </div>
-
                     </div>
                     <BottomNav />
                 </div>

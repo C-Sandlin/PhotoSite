@@ -22,11 +22,10 @@ function TopNav() {
                     </a>
                 </div>
                 <div className="navlinks-desktop">
-                    <a className="navlink" href="/allPhotos"><span className="link-numbers">01</span>All&nbsp;Photos</a>
                     <div className="dropdown">
                         <a className="dropbtn">
-                            <span className="link-numbers">02</span>
-                            Journeys&nbsp;<IoIosArrowDown />
+                            <span className="link-numbers">01</span>
+                            Photos&nbsp;<IoIosArrowDown />
                         </a>
                         <div className="dropdown-content-desktop" id="dropdownContentDesktop">
                             <a href="/journeys/NewZealand">New Zealand</a>
@@ -38,6 +37,7 @@ function TopNav() {
                             <a href="/journeys/Oregon">Oregon</a>
                         </div>
                     </div>
+                    <a href="/videos" className="navlink"><span className="link-numbers">02</span>Video</a>
                     <a href="home" className="navlink"><span className="link-numbers">03</span>Prints</a>
                     <a href="home" className="navlink"><span className="link-numbers">04</span>About&nbsp;Me</a>
                 </div>
@@ -47,11 +47,8 @@ function TopNav() {
                             <IoIosClose />
                         </IconContext.Provider>
                     </p>
-                    <div className="mobile-nav-div">
-                        <a href="home" className="navlink mobileNav"><span className="link-numbers">01</span>All Photos</a>
-                    </div>
                     <div className="dropdown-mobile mobile-nav-div" >
-                        <p className="dropbtn mobileNav" ><span className="link-numbers">02</span>Journeys</p>
+                        <p className="dropbtn mobileNav" ><span className="link-numbers">01</span>Photos</p>
                         <div className="dropdown-content-mobile" id="dropdownContentMobile">
                             <a href="/journeys/NewZealand" className="mobileNav">New Zealand</a>
                             <a href="/journeys/NorthernItaly" className="mobileNav">Northern Italy</a>
@@ -63,10 +60,13 @@ function TopNav() {
                         </div>
                     </div>
                     <div className="mobile-nav-div">
-                        <a href="home" className="navlink mobileNav"><span className="link-numbers">03</span>Prints</a>
+                        <a href="/videos" className="navlink mobileNav"><span className="link-numbers">02</span>Video</a>
                     </div>
                     <div className="mobile-nav-div">
-                        <a href="home" className="navlink mobileNav"><span className="link-numbers">04</span>About Me</a>
+                        <a href="/home" className="navlink mobileNav"><span className="link-numbers">03</span>Prints</a>
+                    </div>
+                    <div className="mobile-nav-div">
+                        <a href="/home" className="navlink mobileNav"><span className="link-numbers">04</span>About Me</a>
                     </div>
                 </div>
             </div>
