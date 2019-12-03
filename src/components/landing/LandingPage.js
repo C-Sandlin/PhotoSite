@@ -158,7 +158,7 @@ export default class LandingPage extends React.Component {
                                     Northern Italy
                                 </p>
                                 <p className="project-subtitle" onClick={() => this.sendTo("northernItaly")}>
-                                    South Tyrol<br class="mobile-break"></br> & Venice
+                                    South Tyrol & Venice
                                 </p>
                             </div>
                         </div>

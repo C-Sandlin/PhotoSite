@@ -20,13 +20,18 @@
     width: 170px;
     margin-left: 25px;
     margin-top: 35px;
-    fill: white;
 
     @media (min-width: 768px) {
         width: 200px;
         margin-left: 40px;
         margin-top: 10px;
     }
+}
+
+.mobileLogo {
+    width: 150px;
+    margin-left: 10%;
+    margin-top: 10%;
 }
 
 .topnav-logo-container svg {
@@ -70,7 +75,7 @@
 }
 
 .navlinks-desktop a:hover {
-    color: $secondaryColor;
+    color: $activeYellow;
 }
 
 .navlinks-mobile {
@@ -83,23 +88,32 @@
 .navlinks-mobile a {
     text-decoration: none;
     color: white;
-    font-family: $secondaryFont;
+    font-family: $primaryFont;
     text-transform: uppercase;
 }
 
 .mobile-nav-div {
     text-align: right;
     margin-right: 20%;
-    padding-top: 20px;
+    padding-top: 25px;
 }
 
 a.mobileNav, p.mobileNav {
-    font-family: $secondaryFont;
-    font-size: 1.5rem;
+    font-family: $primaryFont;
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: .1em;
     text-decoration: none;
-    color: rgba(0, 0, 0, 0.625);
-    line-height: 50px;
+    text-transform: uppercase;
+    color: $white;
+    line-height: 5%;
 }
+
+a.mobileNav:active, p.mobileNav:active {
+    color: $activeYellow;
+}
+
+
 
 #navMenu {
     opacity: 0;
@@ -109,10 +123,10 @@ a.mobileNav, p.mobileNav {
     position: fixed;
     top: 0px;
     right: 0px;
-    background-color: $secondaryColor;
+    background-color: $darkGreen;
     z-index:1000;
     transition: .2s cubic-bezier(0.39, 0.575, 0.565, 1);
-    padding-top: 10vh;
+    // padding-top: 10vh;
     overflow-x: hidden;
     overflow-y: hidden;
     visibility: hidden;
@@ -166,17 +180,17 @@ p#closeMenu:hover, p#closeMenu:focus {
     display: block;
     height: auto;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.029);
     overflow-y: hidden;
     transition: 2s all;
 }
 
 
 .dropdown-content-mobile  a {
-    color: rgb(123, 123, 123);
+    color: $lightGreen;
     display:inline-block;
     width: 100%;
-    font-size: 15px;
+    font-size: 12px;
+    line-height: 30px;
 }
 
 .dropdown-content-mobile.showit a {
@@ -199,7 +213,7 @@ p#closeMenu:hover, p#closeMenu:focus {
 
 .link-numbers {
     font-size: 7px;
-    color: rgb(0, 115, 255);
+    color: $activeYellow;
     margin-right: 5px;
     line-height: 3em;
     vertical-align: middle;

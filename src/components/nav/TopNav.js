@@ -1,9 +1,11 @@
 import React from 'react';
 // import mainLogo from "../../assets/cs-main-logo.svg";
 import mainLogo from "../../assets/Logo_Lockup.svg";
+import mobileLogo from "../../assets/Logo_Badge.svg"
 import { IoIosClose, IoIosArrowDown, IoMdMenu } from "react-icons/io";
 import { IconContext } from "react-icons";
 import "./TopNav.scss"
+import "../../styles/variables.scss";
 
 function TopNav() {
     return (
@@ -28,13 +30,13 @@ function TopNav() {
                             Photos&nbsp;<IoIosArrowDown />
                         </a>
                         <div className="dropdown-content-desktop" id="dropdownContentDesktop">
-                            <a href="/journeys/NewZealand">New Zealand</a>
-                            <a href="/journeys/NorthernItaly">Northern Italy</a>
-                            <a href="/journeys/Yosemite">Yosemite</a>
-                            <a href="/journeys/SanDiego">San Diego</a>
-                            <a href="/journeys/Arizona">Arizona</a>
-                            <a href="/journeys/Yellowstone">Yellowstone</a>
-                            <a href="/journeys/Oregon">Oregon</a>
+                            <a href="/photos/NewZealand">New Zealand</a>
+                            <a href="/photos/NorthernItaly">Northern Italy</a>
+                            <a href="/photos/Yosemite">Yosemite</a>
+                            <a href="/photos/SanDiego">San Diego</a>
+                            <a href="/photos/Arizona">Arizona</a>
+                            <a href="/photos/Yellowstone">Yellowstone</a>
+                            <a href="/photos/Oregon">Oregon</a>
                         </div>
                     </div>
                     <a href="/videos" className="navlink"><span className="link-numbers">02</span>Video</a>
@@ -47,16 +49,19 @@ function TopNav() {
                             <IoIosClose />
                         </IconContext.Provider>
                     </p>
+                    <div className="mobile-nav-logo">
+                        <img src={mobileLogo} className="mobileLogo" alt="Colin Sandlin Photography"></img>
+                    </div>
                     <div className="dropdown-mobile mobile-nav-div" >
                         <p className="dropbtn mobileNav" ><span className="link-numbers">01</span>Photos</p>
                         <div className="dropdown-content-mobile" id="dropdownContentMobile">
-                            <a href="/journeys/NewZealand" className="mobileNav">New Zealand</a>
-                            <a href="/journeys/NorthernItaly" className="mobileNav">Northern Italy</a>
-                            <a href="/journeys/Yosemite" className="mobileNav">Yosemite</a>
-                            <a href="/journeys/SanDiego" className="mobileNav">San Diego</a>
-                            <a href="/journeys/Arizona" className="mobileNav">Arizona</a>
-                            <a href="/journeys/Yellowstone" className="mobileNav">Yellowstone</a>
-                            <a href="/journeys/Oregon" className="mobileNav">Oregon</a>
+                            <a href="/photos/NewZealand" className="mobileNav">New Zealand</a>
+                            <a href="/photos/NorthernItaly" className="mobileNav">Northern Italy</a>
+                            <a href="/photos/Yosemite" className="mobileNav">Yosemite</a>
+                            <a href="/photos/SanDiego" className="mobileNav">San Diego</a>
+                            <a href="/photos/Arizona" className="mobileNav">Arizona</a>
+                            <a href="/photos/Yellowstone" className="mobileNav">Yellowstone</a>
+                            <a href="/photos/Oregon" className="mobileNav">Oregon</a>
                         </div>
                     </div>
                     <div className="mobile-nav-div">
