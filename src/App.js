@@ -3,7 +3,7 @@ import TopNav from './components/nav/TopNav.js'
 import "./styles/main.scss";
 import AboutMe from "./components/aboutme/AboutMe"
 import { withRouter } from 'react-router'
-import LandingPage from './components/landing/LandingPageHooks.js';
+import LandingPage from './components/landing/LandingPage.js';
 import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
 import Arizona from './components/photos/Arizona.js';
 import NewZealand from './components/photos/NewZealand.js';
