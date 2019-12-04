@@ -19,6 +19,14 @@ export default class LandingPage extends React.Component {
     componentDidMount = () => {
         window.addEventListener('wheel', this.handleScroll, true);
 
+        let mobileProj = document.querySelectorAll('.landing-project');
+        mobileProj.forEach(proj => {
+            proj.addEventListener('touchstart', this.handleStart, true);
+        })
+        mobileProj.forEach(proj => {
+            proj.addEventListener('touchend', this.handleEnd, true);
+        })
+
         let landingText = document.querySelectorAll('.landing-text');
         landingText.forEach(text => {
             text.addEventListener('mousemove', (e) => {
@@ -35,13 +43,82 @@ export default class LandingPage extends React.Component {
         window.removeEventListener('wheel', this.handleScroll);
     }
 
+    handleSwipe = (event) => {
+        let currentProj;
+        let nextProj;
+        let prevProj;
+        var newState = {};
+
+        if (event.target.tagName === 'DIV' && event.target.classList.contains('landing-text')) {
+            currentProj = event.target.parentElement;
+            nextProj = currentProj.nextSibling;
+            prevProj = currentProj.previousSibling;
+        }
+
+        if (event.target.tagName === 'P' && event.target.parentElement.classList.contains('landing-text')) {
+            currentProj = event.target.parentElement.parentElement;
+            nextProj = currentProj.nextSibling;
+            prevProj = currentProj.previousSibling;
+        }
+
+        if (this.state.ts > this.state.te) {
+            if (nextProj !== null) {
+                currentProj.classList.remove('current');
+                currentProj.classList.add('above');
+
+                nextProj.classList.remove('below');
+                nextProj.classList.add('current');
+
+
+                newState[nextProj.id.split("-")[0]] = "active";
+                newState[currentProj.id.split("-")[0]] = "inactive"
+                this.setState(newState);
+                this.checkStatus();
+            } else {
+                return;
+            }
+        } else if (this.state.ts < this.state.te) {
+            if (prevProj !== null) {
+                currentProj.classList.remove('current');
+                currentProj.classList.add('below');
+
+                prevProj.classList.remove('above');
+                prevProj.classList.add('current');
+
+                newState[prevProj.id.split("-")[0]] = "active";
+                newState[currentProj.id.split("-")[0]] = "inactive"
+                this.setState(newState);
+                this.checkStatus();
+
+            } else {
+                return;
+            }
+        }
+    }
+
+    handleStart = (event) => {
+        let ts;
+        ts = event.touches[0].clientY;
+        this.setState({ ts: ts });
+    }
+
+
+    handleEnd = (event) => {
+        let te;
+        te = event.changedTouches[0].clientY;
+        this.setState({ te: te });
+        this.handleSwipe(event);
+    }
+
+
     handleScroll = (event) => {
         let currentProj;
         let nextProj;
         let prevProj;
         var newState = {};
 
-        let checkIntertia = () => {
+
+        let checkInertia = () => {
             // check intertia of downward scroll
             if (event.deltaY > 90) {
 
@@ -83,14 +160,13 @@ export default class LandingPage extends React.Component {
             }
         }
 
-
         if (event.target.tagName === 'DIV' && event.target.classList.contains('landing-text')) {
 
             currentProj = event.target.parentElement;
             nextProj = currentProj.nextSibling;
             prevProj = currentProj.previousSibling;
 
-            checkIntertia();
+            checkInertia();
         }
 
         if (event.target.tagName === 'P' && event.target.parentElement.classList.contains('landing-text')) {
@@ -99,7 +175,7 @@ export default class LandingPage extends React.Component {
             nextProj = currentProj.nextSibling;
             prevProj = currentProj.previousSibling;
 
-            checkIntertia();
+            checkInertia();
         }
 
     }
