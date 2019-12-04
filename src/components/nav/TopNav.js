@@ -4,8 +4,11 @@ import mainLogo from "../../assets/Logo_Lockup.svg";
 import mobileLogo from "../../assets/Logo_Badge.svg"
 import { IoIosClose, IoIosArrowDown, IoMdMenu } from "react-icons/io";
 import { IconContext } from "react-icons";
+import { FaVimeoV, FaYoutube } from "react-icons/fa";
+import { AiFillInstagram } from "react-icons/ai";
 import "./TopNav.scss"
 import "../../styles/variables.scss";
+import BottomNav from './BottomNav';
 
 function TopNav() {
     return (
@@ -72,6 +75,15 @@ function TopNav() {
                     </div>
                     <div className="mobile-nav-div">
                         <a href="/home" className="navlink mobileNav"><span className="link-numbers">04</span>About Me</a>
+                    </div>
+                    <div className="mobile-bottom-nav">
+                        <IconContext.Provider value={{ style: { fontSize: '19px' } }} >
+                            <a href="https://www.colinsandlin.com"><AiFillInstagram className="social-icon" /></a>
+                        </IconContext.Provider>
+                        <IconContext.Provider value={{ style: { fontSize: '17px' } }} >
+                            <a href="https://www.colinsandlin.com"><FaYoutube className="social-icon" /></a>
+                            <a href="https://www.colinsandlin.com"><FaVimeoV className="social-icon" /></a>
+                        </IconContext.Provider>
                     </div>
                 </div>
             </div>

@@ -121,11 +121,11 @@ a.mobileNav:active, p.mobileNav:active {
     height: 100%;
     display: block;
     position: fixed;
-    top: 0px;
-    right: 0px;
+    top: 0;
+    right: 0;
     background-color: $darkGreen;
     z-index:1000;
-    transition: .2s cubic-bezier(0.39, 0.575, 0.565, 1);
+    transition: .3s cubic-bezier(0.39, 0.575, 0.565, 1);
     // padding-top: 10vh;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -133,12 +133,13 @@ a.mobileNav:active, p.mobileNav:active {
 }
 
 #navMenu.active {
+
     width: 100%;
     height: 100%;
     display: block;
     opacity: 1;
     visibility: visible;
-    transition: .2s cubic-bezier(0.39, 0.575, 0.565, 1);
+    transition: .3s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 p#closeMenu {

@@ -1,6 +1,16 @@
-.BottomNav {
-    display: none;
+@import "../../styles/variables.scss";
 
+.mobile-bottom-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 20%;
+    padding-top: 15%;
+}
+
+.BottomNav {
+
+    display: none;
     @media (min-width: 769px) {
         display: flex;
         flex-direction: row;
@@ -10,21 +20,33 @@
 }
 
 .left-container {
-    display: flex;
-    flex: 1;
-    padding-left: 20px;
+    display: none;
+    @media (min-width: 769px) {
+        display: flex;
+        flex: 1;
+        padding-left: 20px;
+    }
 }
 
 .right-container {
     display: flex;
     flex: 1;
     justify-content: flex-end;
-    align-items: center;
-    padding-right: 20px;
+    padding-top: 10%;
+    margin-right: 20%;
+    @media (min-width: 769px) {
+        padding-top: 0%;
+        margin-right: 20px;
+    }
 }
 
 .social-icon {
-    align-self: center;
-    padding: 15px;
-    color: rgb(169, 169, 169);
-}
+    color: $lightGreen;
+    padding-left: 40px;
+
+    @media (min-width: 769px) {
+        align-self: center;
+        padding: 15px;
+        color: rgb(169, 169, 169);
+    }
+} 

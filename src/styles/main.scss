@@ -2,8 +2,13 @@
 /* EXAMPLE OF SASS: background-color: $lightGrey; */
 /* MEDIA QUERIES: 576px, 768px, 992px, and 1200px; */
 
-body {
+html, body {
     margin: 0px;
     padding: 0px;
     overscroll-behavior: none;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+
 }
