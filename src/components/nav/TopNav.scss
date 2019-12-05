@@ -57,7 +57,7 @@
     width: 100%;
     justify-content: flex-end;
     margin-top: 20px;
-    @media (max-width: 768px) {
+    @media (max-width: 884px) {
         display: none;
     }
 }
@@ -80,7 +80,7 @@
 
 .navlinks-mobile {
     display: block;
-    @media (min-width: 769px) {
+    @media (min-width: 883px) {
         display: none;
     }
 }
@@ -158,6 +158,14 @@ p#closeMenu:hover, p#closeMenu:focus {
     position: absolute;
     top: 35px;
     right: 35px;
+
+    @media (max-width: 768px) and (min-width: 427px) {
+        top: 35px;
+    }
+
+    @media (min-width: 768px) {
+        top: 15px;
+    }
 }
 .dropdown {
   margin-top: -2px;
